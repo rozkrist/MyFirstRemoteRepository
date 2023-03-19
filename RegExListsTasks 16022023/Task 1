@@ -1,0 +1,20 @@
+# 1 Ask the user to enter the text and a letter. Count how many occurrences of the letter provided
+import re 
+text = input("Please enter any text:\n")
+letter = input("Please type any letter:\n")
+occurrances = re.search(letter, text)
+count = text.count(letter)
+if occurrances:
+    print("Entered letter matches " + str(count) + " times")
+else:
+    print("Letter not found")
+
+# 1.1 Count the occurances of the each character in the text provided and display them in output.
+
+occurrances = set(text)
+for element in occurrances:
+    charCount = 0
+    for character in text:
+        if character == element:
+            charCount += 1
+    print("The count of character '{}' is {}".format(element,charCount))
