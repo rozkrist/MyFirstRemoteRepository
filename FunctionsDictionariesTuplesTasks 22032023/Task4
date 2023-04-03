@@ -1,0 +1,11 @@
+# Write a function that takes a list of integers as a parameter and returns a list of only the even integers in the original list
+
+def even_int_from_list(listInput:list):
+     evenList = []
+     for element in listInput:
+         if element % 2 == 0:
+             evenList.append(element)
+     return evenList
+
+listInp = [5,2,3,8,7,1,0,9,6]
+print(even_int_from_list(listInp))

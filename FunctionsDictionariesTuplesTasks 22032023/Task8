@@ -1,0 +1,16 @@
+# Write a function that takes a list of dictionaries as a parameter and returns a new dictionary that contains the sum of the values for each key in the original dictionaries.
+
+def get_sums(list_of_dict:list):
+     sums_dict = dict()
+     for values_dict in list_of_dict:
+         for key,value in values_dict.items():
+             if key in sums_dict:
+                 sum = sums_dict.get(key)
+                 sum += value
+                 sums_dict[key] = sum
+             else:
+                 sums_dict[key] = value
+     return sums_dict
+
+listInput = [{1:19,2:7,3:6},{1:19,2:7,3:6},{1:7,2:5,3:3}]
+print(get_sums(listInput))

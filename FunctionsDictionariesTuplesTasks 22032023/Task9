@@ -1,0 +1,19 @@
+# Write a function that takes a tuple as a parameter and returns a new tuple that has the first and last elements swapped.
+
+def rev_tuple(tup:tuple):
+     tup_list = list(tup)
+     tup_list.reverse()
+     return tuple(tup_list)
+
+def rev_tuple_first_last(tup:tuple):
+     tup_list = list(tup)
+     tup_list[0],tup_list[len(tup_list)-1] = tup_list[len(tup_list)-1],tup_list[0]
+     return tuple(tup_list)
+
+input_tup = (45,32,21,94,32,11)
+print(rev_tuple_first_last(input_tup))
+
+
+
+
+         

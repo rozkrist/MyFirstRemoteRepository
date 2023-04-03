@@ -1,0 +1,20 @@
+# Write a function that takes a string as a parameter and returns True if the string is a palindrome and False otherwise.
+
+def reverse(text:str):
+     revStr = ""
+     for char in text:
+         revStr = char + revStr
+     return revStr
+
+def is_palindrome(text:str):
+     text = text.lower()
+     rev = text[::-1]
+     if rev == text:
+         return True
+     else:
+         return False
+
+textInput = input("Enter the text:\n")
+print(is_palindrome(textInput))
+
+print(reverse(textInput))

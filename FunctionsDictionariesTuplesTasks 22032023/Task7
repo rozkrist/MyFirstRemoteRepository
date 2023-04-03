@@ -1,0 +1,11 @@
+# Write a function that takes a dictionary as a parameter and returns a list of all the keys in the dictionary that have an even value.
+
+def key_of_even(dict_input:dict):
+     keys = []
+     for key,value in dict_input.items():
+         if value % 2 == 0:
+             keys.append(key)
+     return keys
+
+input_dict = {"1":6,"2":10,"3":9,"4":8}
+print(key_of_even(input_dict))
